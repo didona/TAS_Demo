@@ -5,12 +5,13 @@ WPMC_HOME="Workload_Monitor_Connector"
 WPMC_ARTIFACT="WPMConnector.jar"
 WPM_HOME="wpm"
 TASC_HOME="ControllerTas"
-RG_HOME="RadargunTAS"
+RG_HOME="RadargunTASDemo"
 LATTICE_HOME="LatticeCloudTM"
 
 echo "Downloading the TAS demo package"
 
-echo "Compiling the Radargun Framework"
+echo "Downloading the Radargun Framework for the demo"
+git clone https://github.com/didona/RadargunTASDemo.git ${RG_HOME}
 
 echo "Downloading LatticeCloudTM"
 git clone git://github.com/cloudtm/LatticeCloudTM.git ${LATTICE_HOME} 
