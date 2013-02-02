@@ -93,12 +93,13 @@ fi
 
 
 ####### first start the master
+cd ${RADARGUN_HOME}/../wpm ; ./run_log_service.sh &;
 . ${RADARGUN_HOME}/bin/master.sh -s ${SLAVE_COUNT} -m ${MASTER}
 PID_OF_MASTER_PROCESS=$RADARGUN_MASTER_PID
 #### Sleep for a few seconds so master can open its port
 sleep 5s
 ####### then start the rest of the nodes
-CMD="source ~/.bash_profile ; cd $WORKING_DIR"
+CMD="source ~/.bash_profile ; cd .. ; cd wpm ; ./run_cons_prod.sh >/dev/null; cd $WORKING_DIR"
 CMD="$CMD ; bin/slave.sh -m ${MASTER} -g ${MASTER}"
 
 for slave in $SLAVES; do

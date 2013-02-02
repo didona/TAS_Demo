@@ -5,7 +5,7 @@ WPMC_HOME="Workload_Monitor_Connector"
 WPMC_ARTIFACT="WPMConnector.jar"
 WPM_HOME="wpm"
 TASC_HOME="ControllerTas"
-RG_HOME=
+RG_HOME="RadargunTAS"
 LATTICE_HOME="LatticeCloudTM"
 
 echo "Downloading the TAS demo package"
